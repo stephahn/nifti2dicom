@@ -594,6 +594,7 @@ def save_dicom_from_nifti_seg(nifti_file: str, ref_dicom_series_dir: str, output
         manufacturer_model_name="MOOSE (Multi-organ objective segmentation)",
         software_versions="2.0",
         device_serial_number=datetime.now().strftime("%Y%m%d%H%M%S"),  # Using current timestamp as serial number
+        omit_empty_frames=False
     )
 
     # Save the DICOM SEG object with same filename as NIFTI file
